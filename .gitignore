@@ -52,3 +52,35 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+
+# --- Added for Visual Studio ---
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio working folder
+.vs/
+
+# Rider IDE
+.idea/
+*.sln.iml
+
+# Visual Studio Code
+.vscode/
+
+# Local configuration
+*.localhistory
+*.tss
+*.cache
+
+# Azure Functions local settings
+local.settings.json
+
+# dotCover, ReSharper, NCrunch, etc.
+*.dotCover
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.ncrunch*
+*.DotSettings.user
