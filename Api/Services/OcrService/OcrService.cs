@@ -8,7 +8,11 @@ public class OcrService(IWebHostEnvironment env) : IOcrService
 
     public Task<string> ExtractTextAsync(Stream imageStream)
     {
-        throw new NotImplementedException();
+        using var engine = new TesseractEngine(_tesseractDataPath, "pol", EngineMode.Default);
+        using var image = Pix.LoadFromMemory(ReadFully(imageStream));
+        using var page = engine.Process(image);
+
+        return Task.FromResult(page.GetText());
     }
 
     private static byte[] ReadFully(Stream input)
